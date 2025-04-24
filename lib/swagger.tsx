@@ -12,8 +12,8 @@ export const getApiDocs = async () => {
       },
       servers: [
         {
-          url: "https://vish-servers.online/api",
-          description: "Local server",
+          url: process.env.NEXT_PUBLIC_API_URL as string,
+          description: "Production server",
         },
         {
           url: "http://localhost:3000/api",
