@@ -7,6 +7,7 @@ import { Mail, Paperclip, FileText, ShieldCheck } from "lucide-react"
 import { Github } from "lucide-react"
 import FeatureGrid from '@/components/portfolio-comps/feature-grid'
 import { GitHubLogoIcon } from '@radix-ui/react-icons'
+import VersionDisplay from '@/components/version-display'
 
 const features = [
     {
@@ -68,7 +69,8 @@ export function BuiltForDevelopers() {
 export default function Page() {
     return (
         <div>
-            <div className="flex p-2 justify-end items-center">
+            <div className="flex p-2 justify-between items-center">
+                <VersionDisplay />
                 <ThemeSwitcher />
             </div>
 
