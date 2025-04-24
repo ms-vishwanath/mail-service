@@ -1,11 +1,13 @@
-import React from 'react'
 
-export default function Page() {
+import ReactSwagger from "@/components/react-swagger";
+import { getApiDocs } from "@/lib/swagger";
+
+
+export default async function Page() {
+  const spec = await getApiDocs();
   return (
-    <div>
-      <div>
-        <h1>MAIL SERVICE</h1>
-      </div>
-    </div>
-  )
+    <section className="container mx-auto">
+      <ReactSwagger spec={spec} />
+    </section>
+  );
 }

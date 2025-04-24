@@ -37,8 +37,6 @@ export const POST = async (request: NextRequest) => {
         };
       })
     );
-    console.log(files);
-    console.log(attachments);
 
     const fromEmail = (transporter.options as any)?.auth?.user;
 
